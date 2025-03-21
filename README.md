@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Club français des cryptomonnaies (CFC)
 
-## Getting Started
+Site web du Club français des cryptomonnaies, la principale communauté crypto française.
 
-First, run the development server:
+## Technologies utilisées
+
+- [Next.js 15](https://nextjs.org/) - Framework React moderne avec server-side rendering et optimisations de performance
+- [React 19](https://reactjs.org/) - Bibliothèque JavaScript pour construire des interfaces utilisateur
+- [TypeScript](https://www.typescriptlang.org/) - Superset de JavaScript typé
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utility-first 
+- [shadcn/ui](https://ui.shadcn.com/) - Composants UI réutilisables basés sur Radix UI
+- [Resend](https://resend.com/) - API d'e-mail pour le formulaire de contact
+- [Bun](https://bun.sh/) - Runtime JavaScript et gestionnaire de paquets
+
+## Fonctionnalités
+
+- Design responsive mobile-first
+- Navigation avec menu hamburger sur mobile
+- Sections de présentation:
+  - Hero section avec appel à l'action
+  - Section Statistiques (membres, événements, partenariats)
+  - Section Témoignages avec carousel
+  - Section À propos
+  - Section Équipe
+  - Formulaire de contact avec intégration Resend
+  - Pied de page avec liens et médias sociaux
+
+## Développement
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Installer les dépendances
+bun install
+
+# Lancer le serveur de développement
+bun run dev
+
+# Construire pour la production
+bun run build
+
+# Démarrer le serveur de production
+bun run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuration de l'API d'e-mail
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pour que le formulaire de contact envoie des e-mails, suivez ces étapes:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Créez un compte sur [Resend](https://resend.com)
+2. Générez une clé API depuis le tableau de bord
+3. Créez un fichier `.env.local` à la racine du projet avec:
+   ```
+   RESEND_API_KEY=re_votreCléAPI
+   ```
+4. Redémarrez le serveur de développement
 
-## Learn More
+Par défaut, les e-mails sont envoyés à `cfc.servicecom@gmail.com`. Vous pouvez modifier cette adresse dans le fichier `app/api/send/route.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+## Structure du projet
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/app` - Composants de page et layout principal
+  - `/components` - Composants réutilisables du site
+  - `/api` - Routes API pour les fonctionnalités back-end
+- `/components` - Composants d'UI réutilisables (shadcn/ui)
+- `/public` - Fichiers statiques (images, etc.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Déploiement
 
-## Deploy on Vercel
+Ce site peut être facilement déployé sur des plateformes comme Vercel, Netlify ou tout autre service supportant Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE)
+
+---
+
+© Club français des cryptomonnaies
