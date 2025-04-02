@@ -60,7 +60,7 @@ const teamMembers: TeamMember[] = [
     name: "Dylan Tarquini",
     role: "Administrateur",
     bio: "",
-    avatar: "/team/dylan.png",
+    avatar: "/team/dylan.jpeg",
     social: {
       linkedin: "https://www.linkedin.com/in/dylan-tarquini/",
     },
@@ -73,7 +73,7 @@ const teamMembers: TeamMember[] = [
     bio: "",
     avatar: "/team/arthur-bensimon.jpg",
     social: {
-      linkedin: "https://linkedin.com/in/arthurbensimon",
+      linkedin: "https://www.linkedin.com/in/arthur-bensimon/",
     },
   },
   {
