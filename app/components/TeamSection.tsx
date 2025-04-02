@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
     bio: "",
     avatar: "/team/quentin-lenfle.jpg",
     social: {
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/quentin-lenfle-b7bbb2357/",
     },
   },
   {
