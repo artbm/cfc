@@ -60,7 +60,7 @@ const teamMembers: TeamMember[] = [
     name: "Dylan Tarquini",
     role: "Administrateur",
     bio: "",
-    avatar: "/team/dylan.jpeg",
+    avatar: "/team/dylan.png",
     social: {
       linkedin: "https://www.linkedin.com/in/dylan-tarquini/",
     },
